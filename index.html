@@ -111,7 +111,7 @@ function pickNameOutOfHat(names) {
 function generateNames(){
   days.forEach(function (day, index) {
       person = pickNameOutOfHat(names)
-      person = person == "Liam" && day == "Friday" ? person + " ;) Trampa!": person
+      person = person == "Liam" && day == "Friday" ? person + " ;)": person
       updateElement(day, person)
     });
     names = ['Antonio', 'Dani', 'Pablo', 'Diego', 'Liam']
