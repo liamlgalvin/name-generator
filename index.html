@@ -99,7 +99,8 @@
 
 <script>
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-let names = ['Antonio', 'Dani', 'Pablo', 'Diego', 'Liam']
+let people = ['Antonio', 'Dani', 'Pablo', 'Diego', 'Liam']
+let names = people
 
 function pickNameOutOfHat(names) {
     random = Math.floor(Math.random() * names.length)
@@ -114,7 +115,7 @@ function generateNames(){
       person = person == "Liam" && day == "Friday" ? person + " ;)": person
       updateElement(day, person)
     });
-    names = ['Antonio', 'Dani', 'Pablo', 'Diego', 'Liam']
+    names = people
 }
 
 function updateElement(id, person){
