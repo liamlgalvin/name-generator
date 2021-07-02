@@ -4,16 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.80.0">
     <title>who's on issue watch?</title>
-
-    
-
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -29,23 +21,22 @@
           font-size: 3.5rem;
         }
       }
-
-    </style>
-
-    
+    </style>    
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+
+    <script src="js/script.js" defer></script>
   </head>
   <body class="d-flex h-100 text-center text-white bg-dark">
     
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">whosOnIssueWatch?</h3>
+      <h3 class="float-md-start mb-0">who'sOnIssueWatch?</h3>
 
     </div>
   </header>
-
+  
   <main class="px-3">
     <div class="container" style="margin-bottom: 40px;">
       <div class="row">
@@ -92,6 +83,27 @@
     <p class="lead">
       <a onclick="generateNames()" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Generate names</a>
     </p>
+
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input" id="Antonio" value="1" onclick="updateEmployeesList(this, this.id)" checked />
+      <label class="form-check-label" for="Antonio">Antonio</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input" id="Pablo" value="1" onclick="updateEmployeesList(this, this.id)" checked />
+      <label class="form-check-label" for="Pablo">Pablo</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input" id="Dani" value="1" onclick="updateEmployeesList(this, this.id)" checked />
+      <label class="form-check-label" for="Dani">Dani</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input" id="Diego" value="1" onclick="updateEmployeesList(this, this.id)" checked />
+      <label class="form-check-label" for="Diego">Diego</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" class="form-check-input" id="Liam" value="1" onclick="updateEmployeesList(this, this.id)" checked />
+      <label class="form-check-label" for="Liam">Liam</label>
+    </div>
   </main>
 
   <footer class="mt-auto text-white-50">
@@ -100,31 +112,7 @@
 </div>
 
 
-<script>
-let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-let names = ['Antonio', 'Dani', 'Pablo', 'Diego', 'Liam']
 
-function pickNameOutOfHat(names) {
-    random = Math.floor(Math.random() * names.length)
-    person = names[random]
-    names.splice(random, 1)
-    return person
-}
-
-function generateNames(){
-  days.forEach(function (day, index) {
-      person = pickNameOutOfHat(names)
-      person = person == "Liam" && day == "Friday" ? person + " ;) Trampa!": person
-      updateElement(day, person)
-    });
-    names = ['Antonio', 'Dani', 'Pablo', 'Diego', 'Liam']
-}
-
-function updateElement(id, person){
-  document.getElementById(id).innerHTML = person
-}
-
-</script>
     
   </body>
 </html>
