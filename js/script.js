@@ -43,3 +43,15 @@ function updateEmployeesList(checkbox, name){
       removeName(name)
     }
 }
+
+function copyNames() {
+  var toCopy = "";
+  days.forEach(function (day, index) {
+    var name = document.getElementById(day).innerHTML;
+    toCopy = toCopy + day + ": " + name + "\n"; 
+  });
+
+  navigator.clipboard.writeText(toCopy)
+
+}
+
