@@ -1,4 +1,4 @@
-let people = ['Antonio', 'Dani', 'Liam']
+let people = ['Antonio', 'Dani', 'Liam', 'Raquel']
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 let names = people.slice()
 
